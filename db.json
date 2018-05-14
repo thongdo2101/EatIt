@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Bắp cải xào miến",
+    "description":
+      "Bắp cải xào miến chắc hẳn là món ăn cực dễ làm cho những bạn vụng về nè. Chỉ với giá đỗ, hẹ, miến, gia vị là có thể thực hiện ngay. Kết hợp với cơm trắng sẽ khiến cả nhà thích mê.",
+    "ingredients": [
+      {
+        "name": "miến",
+        "quantity": "100 gram"
+      },
+      {
+        "name": "hành lá",
+        "quantity": "1 cây"
+      },
+      {
+        "name": "tỏi",
+        "quantity": "2 tép"
+      },
+      {
+        "name": "gừng",
+        "quantity": "2 lát"
+      },
+      {
+        "name": "ớt khô",
+        "quantity": "2 trái"
+      },
+      {
+        "name": "dầu ăn",
+        "quantity": "2 muỗng canh"
+      },
+      {
+        "name": "hắc xì dầu",
+        "quantity": "1 và 1/2 muỗng canh"
+      },
+      {
+        "name": "muối",
+        "quantity": "1/2 thìa cà phê"
+      },
+      {
+        "name": "đường trắng",
+        "quantity": "1/2 thìa cà phê"
+      },
+      {
+        "name": "bắp cải",
+        "quantity": "1/2 cái"
+      }
+    ],
+    "steps": [
+      "Bạn có thể chọn bất cứ loại miến nào tùy theo sở thích, ở đây mình dùng miến khoai lang. Miến ngâm nước ấm cho nở mềm. Tỏi bóc vỏ thái nhỏ, ớt khô thái nhỏ. Làm nóng dầu ăn trong chảo. Phi thơm tỏi và ớt khô. Cho bắp cải thái sợi vào đảo đều.",
+      "Cho hắc xì dầu, muối, đường vào xào cho hòa quyện, Cho miến vào tiếp tục đảo đều thêm vài phút nữa là tắt bếp. không nên xào quá lửa vì miến sẽ bị bở.",
+      "Bày món ăn ra đĩa và thưởng thức. Màu sắc cũng rất đẹp mắt."
+    ],
+    "timer": 20,
+    "imageURL":
+      "https://media.cooky.vn/recipe/g2/11286/s750x468/cooky-recipe-cover-r11286.jpg",
+    "originalURL": "https://www.cooky.vn/cong-thuc/bap-cai-xao-mien-11286"
+  }  
+]
