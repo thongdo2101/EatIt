@@ -30,7 +30,9 @@
     - URI: /api/foods/
         - POST -> /api/foods/ => create new
         - GET -> /api/foods/ => read all if in req.body doesn't have a ingredientList
+            (đọc ra tất cả các món ăn)
         - GET -> /api/foods/ read all by condition if in req.body has a ingredientList
+            (đọc ra tất cả các món ăn với nguyên liệu được truyền qua req.body)
         - GET -> /api/foods/:foodId => read a food
         - GET -> /api/foods/:foodId/ingredients/ => get all ingredients of food
 
