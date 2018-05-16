@@ -29,21 +29,18 @@
 - API:
     - URI: /api/foods/
         - POST -> /api/foods/ => create new
-        - GET -> /api/foods/ => read all if in req.body doesn't have a ingredientList
-            (đọc ra tất cả các món ăn)
-        - GET -> /api/foods/ read all by condition if in req.body has a ingredientList
-            (đọc ra tất cả các món ăn với nguyên liệu được truyền qua req.body)
         - GET -> /api/foods/:foodId => read a food
-        - GET -> /api/foods/:foodId/ingredients/ => get all ingredients of food
-
+        - GET -> /api/foods/ 
+            - người dùng truyền về qua res.body 1 array các nguyên liệu(ingredients)
+            - trong route này sẽ sửa dụng controller getAllFoods mà cooked data như dưới
+            - trong hàm route sẽ xử lí dữ liệu: so sánh array người dùng nhập vào với list nguyên liệu của từng món trong list get bởi getAllFoods
+            - trả về người dùng 1 array các món đã lọc
         - PUT -> /api/foods/:foodId => update a food
-        - DELETE -> /api/foods/:foodId => update state of active
     - URI: /api/ingredients/ 
         - POST -> /api/ingredients/ => create a ingredient
         - GET -> /api/ingredients/ => read all
         - GET -> /api/ingredients/:ingId => read one
         - PUT -> /api/ingredients/:ingId => update one
-        - DELETE -> /api/ingredients/;ingId => update state of active
 ## 4. Cooked Data
 - URI: /api/foods/
     - POST -> /api/foods/
@@ -52,22 +49,8 @@
     - GET -> /api/foods/
         - _id
         - name
-        - description
-    - GET -> /api/foods/:foodId 
-        - _id
-        - name
-        - description
-        - ingredients
-        - steps
-        - timers
-        - imageURL
-        - originalURL 
-    - GET -> /api/foods/:foodId/ingredients/ 
-        - ingredients
+        - description 
     - PUT -> /api/foods/:foodId
-        - res.status
-        - foodId
-    - DELETE -> /api/foods/:foodId
         - res.status
         - foodId
 - URI: /api/ingredients/ 
