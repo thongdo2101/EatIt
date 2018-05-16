@@ -50,6 +50,7 @@
         - _id
         - name
         - description 
+        - ingredients
     - PUT -> /api/foods/:foodId
         - res.status
         - foodId

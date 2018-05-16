@@ -3,11 +3,10 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const config = require("./config-local.json");
+const foodsRouter = require("./modules/api/foods/router");
+const ingredientsRouter = require("./modules/api/ingredients/router");
 
 const app = express();
-
-const foodsRouter = require("./modules/api/foods");
-const ingredientsRouter = require("./modules/api/ingredients");
 
 app.use((req, res, next) => {
   res.setHeader("X-Frame-Options", "ALLOWALL");
