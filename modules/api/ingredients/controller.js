@@ -31,5 +31,11 @@ const getAllIngredients = () =>
             .catch(err => reject(err));
     });
 
+module.exports = {
+    createIngredient,
+    getIngredient,
+    getAllIngredients
+};
+
 
 
