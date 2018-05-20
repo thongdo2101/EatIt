@@ -40,7 +40,7 @@ const getAllFoodsByCondition = userInput =>
 function filterFood(foods) {
   var result = [];
   if (!userInput) {
-    foods.forEach(food => {
+    foods.forEach(async food => {
       if (userInput.length > food.ingredients.length) {
         var flag = false;
         food.ingredients.every(item => {
@@ -49,7 +49,7 @@ function filterFood(foods) {
           }
         });
         if (!flag) {
-          result.push(food);
+          await result.push(food);
         }
       }
 
@@ -64,7 +64,7 @@ function filterFood(foods) {
           }
         });
         if (!flag) {
-          result.push(food);
+          await result.push(food);
         }
       }
     });
@@ -95,7 +95,7 @@ const getAllIngredients = () =>
 
 module.exports = {
   createFood,
-  getAllFoods,
+  getAllFoodsByCondition,
   getFood,
   getAllIngredients
 };
