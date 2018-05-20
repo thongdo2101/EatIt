@@ -31,45 +31,43 @@ const getAllFoodsByCondition = userInput =>
       .exec()
       .select("_id name description ingredients")
       .then(async function(foods) {
-        let result = await filterFood(foods);
+        let result = await filterFood(userInput, foods);
         resolve(result);
       })
       .catch(err => reject(err));
   });
 
-function filterFood(foods) {
+async function filterFood(userInput, foods) {
   var result = [];
-  if (!userInput) {
-    foods.forEach(async food => {
-      if (userInput.length > food.ingredients.length) {
-        var flag = false;
-        food.ingredients.every(item => {
-          if (!userInput.includes(item)) {
-            flag = true;
-          }
-        });
-        if (!flag) {
-          await result.push(food);
+  foods.forEach(food => {
+    if (userInput.length > food.ingredients.length) {
+      var flag = false;
+      food.ingredients.every(item => {
+        if (!userInput.includes(item)) {
+          flag = true;
         }
+      });
+      if (!flag) {
+        result.push(food);
       }
+    }
 
-      if (
-        userInput.length < food.ingredients.length &&
-        userInput.ingredients.length > food.length - 3
-      ) {
-        var flag = false;
-        userInput.every(item => {
-          if (!food.ingredients.includes(item)) {
-            flag = true;
-          }
-        });
-        if (!flag) {
-          await result.push(food);
+    if (
+      userInput.length < food.ingredients.length &&
+      userInput.length > food.ingredients.length - 3
+    ) {
+      var flag = false;
+      userInput.every(item => {
+        if (!food.ingredients.includes(item)) {
+          flag = true;
         }
+      });
+      if (!flag) {
+        result.push(food);
       }
-    });
-  }
-  return result;
+    }
+  });
+  return await result;
 }
 
 const getFood = id =>
